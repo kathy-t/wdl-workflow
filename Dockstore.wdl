@@ -1,13 +1,9 @@
-
-workflow test {
-  call hello
-}
-
 task hello {
+  String name
   String docker_image = "quay.io/ga4gh-dream/dockstore-tool-helloworld:1.0.2"
 
   command {
-    echo 'Hello world!'
+    echo 'Hello ${name}!'
   }
   output {
     File response = stdout()
@@ -18,3 +14,6 @@ task hello {
   }
 }
 
+workflow test {
+  call hello
+}
