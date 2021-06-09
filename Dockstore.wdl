@@ -1,3 +1,5 @@
+version 1.0
+
 workflow myWorkflow {
     String? docker_image   = "quay.io/ucsc_cgl/verifybamid:1.3.0"
 
