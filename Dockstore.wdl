@@ -1,4 +1,3 @@
-version 1.0
 
 workflow test {
   String? docker_image = "quay.io/ga4gh-dream/dockstore-tool-helloworld:1.0.2"
