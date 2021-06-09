@@ -6,14 +6,12 @@ workflow test {
 }
 
 task hello {
-  String name
-
   input {
     String docker_image
   }
 
   command {
-    echo 'Hello ${name}!'
+    echo 'Hello world!'
   }
   output {
     File response = stdout()
