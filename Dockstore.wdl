@@ -1,3 +1,8 @@
+workflow test {
+  String? docker_image = "quay.io/ga4gh-dream/dockstore-tool-helloworld:1.0.2"
+  call hello
+}
+
 task hello {
   input {
     String docker_image
@@ -13,9 +18,4 @@ task hello {
   runtime {
     docker: docker_image
   }
-}
-
-workflow test {
-  String? docker_image = "quay.io/ga4gh-dream/dockstore-tool-helloworld:1.0.2"
-  call hello
 }
