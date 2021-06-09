@@ -4,6 +4,7 @@ workflow test {
 }
 
 task hello {
+
   input {
     String docker_image
   }
