@@ -54,7 +54,7 @@ task dockerHubDigest {
   }
   
   runtime {
-    docker: "ubuntu@sha256:9775877f420d453ef790e6832d77630a49b32a92b7bedf330adf4d8669f6600e"
+    docker: "ubuntu@sha256:d7bb0589725587f2f67d0340edb81fd1fcba6c5f38166639cf2a252c939aa30c"
   }
 }
 
