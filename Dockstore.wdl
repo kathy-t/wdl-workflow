@@ -62,5 +62,4 @@ workflow test {
   call quayTag
   call quayDigest
   call dockerHubTag
-  call dockerHubDigest
 }
