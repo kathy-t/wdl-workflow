@@ -39,7 +39,7 @@ task dockerHubTag {
   }
   
   runtime {
-    docker: "ubuntu:16.04"
+    docker: "collaboratory/dockstore-tool-bamstats:develop"
   }
 }
 
