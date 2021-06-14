@@ -39,7 +39,7 @@ task dockerHubTag {
   }
   
   runtime {
-    docker: "collaboratory/dockstore-tool-bamstats:develop"
+    docker: "collaboratory/dockstore-tool-bamstats:99999"
   }
 }
 
@@ -59,5 +59,5 @@ task dockerHubDigest {
 }
 
 workflow test {
-  call dockerHubDigest
+  call dockerHubTag
 }
