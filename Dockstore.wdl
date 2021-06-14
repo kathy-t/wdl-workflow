@@ -54,7 +54,7 @@ task dockerHubDigest {
   }
   
   runtime {
-    docker: "python@sha256:d7bb0589725587f2f67d0340edb81fd1fcba6c5f38166639cf2a252c939aa30c"
+    docker: "collaboratory/dockstore-tool-bamstats@sha256:d7bb0589725587f2f67d0340edb81fd1fcba6c5f38166639cf2a252c939aa30c"
   }
 }
 
