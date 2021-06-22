@@ -69,7 +69,7 @@ task amazonECR {
   }
   
   runtime {
-    docker "public.ecr.aws/x5g7o3i3/appropriate/curl:latest"
+    docker: "public.ecr.aws/x5g7o3i3/appropriate/curl:latest"
   }
 }
 
