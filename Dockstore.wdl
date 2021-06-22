@@ -58,6 +58,21 @@ task dockerHubDigest {
   }
 }
 
+task amazonECR {
+  String name
+  
+  command {
+    echo 'Hello ${name}!'
+  }
+  output {
+    File response = stdout()
+  }
+  
+  runtime {
+    docker "public.ecr.aws/x5g7o3i3/appropriate/curl:latest"
+  }
+}
+
 workflow test {
-  call dockerHubDigest
+  call amazonECR
 }
