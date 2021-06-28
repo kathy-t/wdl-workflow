@@ -58,7 +58,7 @@ task dockerHubDigest {
   }
 }
 
-task amazonECR {
+task publicAmazonECR {
   String name
   
   command {
@@ -73,6 +73,22 @@ task amazonECR {
   }
 }
 
+task privateAmazonECR {
+  String name
+  
+  command {
+    echo 'Hello ${name}!'
+  }
+  output {
+    File response = stdout()
+  }
+  
+  runtime {
+    docker: "467982390456.dkr.ecr.us-east-1.amazonaws.com/kathy-test:1"
+  }
+}
+
 workflow test {
-  call amazonECR
+  call publicAmazonECR
+  call privateAmazonECR
 }
