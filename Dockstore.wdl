@@ -88,7 +88,21 @@ task privateAmazonECR {
   }
 }
 
+task privateQuay {
+  String name
+  
+  command {
+    echo 'Hello ${name}!'
+  }
+  output {
+    File response = stdout()
+  }
+  
+  runtime {
+    docker: "katetran/dockstore-tool-private:1"
+  }
+}
+
 workflow test {
-  call publicAmazonECR
-  call privateAmazonECR
+  call privateQuay
 }
